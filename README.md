@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src="https://github.com/user-attachments/assets/842f5fe2-84ad-464a-83d6-408bf1a0d9fa" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=30%>
+<img src="./assets/logo.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=30%>
 </p>
 
 # Croc: Pretraining Large Multimodal Models with Cross-Modal Comprehension
