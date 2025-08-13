@@ -31,5 +31,8 @@ ckpts*
 # DevContainer
 !.devcontainer/*
 
+# Checkpoint
+checkpoints/
+
 # Demo
 serve_images/
