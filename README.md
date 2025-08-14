@@ -23,11 +23,20 @@ After pretraining on 3 million publicly accessible images and captions, **ViCToR
 
 ## 🤖 Model Zoo
 
-| Name       | LLM         | Checkpoint | MMStar | RealWorldQA | MMBench(en_val) | OCRBench | POPE | MMMU | AI2D | MME  | SEED_I |
-|------------|-------------|------------|--------|-------------|-----------------|----------|------|------|------|------|--------|
-| ViCToR-7B  | Vicuna-7B   | -          | 54.3   | 65.6        | 79.0            | 556      | 88.4 | 48.9 | 79.5 | 2071 | 75.7   |
 
-
+| Name             | ViCToR-7B        |
+|------------------|-------------|
+| LLM             | Vicuna-7B   |
+| Checkpoint      | -           |
+| MMStar          | 54.3        |
+| RealWorldQA     | 65.6        |
+| MMBench(en_val) | 79.0        |
+| OCRBench        | 556         |
+| POPE            | 88.4        |
+| MMMU            | 48.9        |
+| AI2D            | 79.5        |
+| MME             | 2071        |
+| SEED_I          | 75.7        |
 
 
 ## Install
