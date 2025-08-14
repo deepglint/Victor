@@ -5,7 +5,7 @@
 [![Arxiv](https://img.shields.io/badge/arXiv-2410.14332-red)](https://arxiv.org/abs/2410.14332) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-yellow)](https://huggingface.co/collections/DeepGlint-AI/croc-670d1a34f0ad3dc15144585b)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3ead6fce-2da1-4b9e-9bd9-f01447215f41" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
+  <img src="./assets/figure_acchitecture.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
 </p>
 
 
