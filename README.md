@@ -23,11 +23,29 @@ After pretraining on 3 million publicly accessible images and captions, **ViCToR
 
 ## 🤖 Model Zoo
 
-| Name       | LLM         | Checkpoint | MMStar | RealWorldQA | MMBench(en_val) | OCRBench | POPE | MMMU | AI2D | MME  | SEED_I |
-|------------|-------------|------------|--------|-------------|-----------------|----------|------|------|------|------|--------|
-| ViCToR-7B  | Vicuna-7B   | -          | 54.3   | 65.6        | 79.0            | 556      | 88.4 | 48.9 | 79.5 | 2071 | 75.7   |
+| Benchmark          | ViCTOR-7B | LLaVA-1.5-13B | LLaVA-NeXT-8B | Ross   |
+|--------------------|-----------|---------------|---------------|--------|
+| MMStar             | **54.3**  | 34.3          | 43.9          | 53.9   |
+| RealWorldQA        | **65.6**  | 55.3          | 58.4          | 58.7   |
+| MMBench^(cn,val)   | **79.0**  | 67.8          | –             | –      |
+| OCRBench           | 556       | 337           | 531           | 553    |
+| POPE               | 88.4      | 88.4          | 87.1          | 88.1   |
+| MMU                | 48.9      | 37.0          | 43.1          | 49.0   |
+| A12D               | 79.5      | 61.1          | 72.8          | 79.5   |
+| MME                | 2071      | 1781          | 1908          | 1854   |
+| SEED^(f)           | **75.7**  | 68.2          | 72.5          | 73.6   |
 
+## 📊 Visualization
 
+<p align="center">
+  <img src="./assets/vis_1.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
+</p>
+<p align="center">
+  <img src="./assets/vis_2.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
+</p>
+<p align="center">
+  <img src="./assets/vis_3.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
+</p>
 
 
 ## Install
