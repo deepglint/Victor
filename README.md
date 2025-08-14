@@ -11,22 +11,21 @@
 
 Large Multimodal Models (LMMs) often face a modality representation gap during pretraining: while language embeddings remain stable, visual representations are highly sensitive to contextual noise (e.g., background clutter). To address this issue, we introduce a visual comprehension stage, which we call **ViCToR** (**Vi**sual **C**omprehension via **To**ken **R**econstruction), a novel pretraining framework for LMMs. ViCToR employs a learnable visual token pool and utilizes the Hungarian matching algorithm to select semantically relevant tokens from this pool for visual token replacement. Furthermore, by integrating a visual token reconstruction loss with dense semantic supervision, ViCToR can learn tokens which retain high visual detail, thereby enhancing the large language model’s (LLM’s) understanding of visual information.
 
-After pretraining on 3 million publicly accessible images and captions, **ViCToR** achieves state-of-the-art results, improving over LLaVA-NeXT-8B by 10.4%, 3.2%, and 7.2% on the MMStar, SEED, and RealWorldQA benchmarks, respectively. We will release the code and model weights to facilitate reproducibility.
+After pretraining on 3 million publicly accessible images and captions, **ViCToR** achieves state-of-the-art results, improving over LLaVA-NeXT-8B by 10.4%, 3.2%, and 7.2% on the MMStar, SEED_I, and RealWorldQA benchmarks, respectively. We will release the code and model weights to facilitate reproducibility.
 
 ## 📜 News
 **[2024/10/21]** The [paper](https://arxiv.org/pdf/2410.14332) and [code](https://github.com/deepglint/Croc) are released!💥
 
 ## 👨‍💻 Todo
 - [ ] Better model base on ViCToR
-- [ ] Checkpoints of ViCToR-13B
 - [x] Checkpoints of ViCToR-7B
 - [x] Training code for ViCToR
 
 ## 🤖 Model Zoo
 
-| Name | LLM | Checkpoint |  MMBench | MMBench-CN | SEED | MM-Vet | SQA-image | VQA-v2 | POPE | GQA | LLaVA-W |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| ViCToR-7B | Vicuna-7B | [ViCToR-7B](https://huggingface.co/DeepGlint-AI/LLaVA-v1.5-Croc-7b) | 69.1 | 60.5 | 63.0 | 36.8 | 72.3 | 80.1 | 86.9 | 63.5 | 73.3 |
+| Name | LLM | Checkpoint |  MMStar | RealWorldQA | MMBench(en_val) |  OCRBench | POPE | MMMU | AI2D | MME | SEED_I |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ViCToR-7B | Vicuna-7B | - | 54.3 | 65.6 | 79.0 | 556 | - | 88.4 | 48.9 | 79.5 | 2071 | 75.7 |
 
 
 
