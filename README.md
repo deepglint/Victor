@@ -1,8 +1,8 @@
-<p align="center" width="100%">
-<img src="./assets/logo.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=30%>
-</p>
+#<p align="center" width="100%">
+#<img src="./assets/logo.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=30%>
+#</p>
 
-# Croc: Pretraining Large Multimodal Models with Cross-Modal Comprehension
+# ViCToR: Improving Visual Comprehension via Token Reconstruction for Pretraining LMMs
 
 
 
@@ -13,29 +13,29 @@
 </p>
 
 
-Recent advances in Large Language Models (LLMs) have catalyzed the development of Large Multimodal Models(LMMs). However, existing research primarily focuses on tuning language and image instructions, ignoring the critical pretraining phase where models learn to process textual and visual modalities jointly. In this paper, we propose a new pretraining paradigm for LMMs to enhance the visual comprehension capabilities of LLMs by introducing a novel cross-modal comprehension stage. Specifically, we design a dynamically learnable prompt token pool and employ the Hungarian algorithm to replace part of the original visual tokens with the most relevant prompt tokens. Then, we conceptualize visual tokens as analogous to a ''foreign language'' for the LLMs and propose a mixed attention mechanism with bidirectional visual attention and unidirectional textual attention to comprehensively enhance the understanding of visual tokens. Meanwhile, we integrate a detailed caption generation task, leveraging rich descriptions to further facilitate LLMs in understanding visual semantic information. After pretraining on 1.5 million publicly accessible data, we present a new foundation model called **Croc**. Experimental results demonstrate that Croc achieves new state-of-the-art performance on massive vision-language benchmarks. To support reproducibility and facilitate further research, we will release the training code and pre-trained model weights.
+Large Multimodal Models (LMMs) often face a modality representation gap during pretraining: while language embeddings remain stable, visual representations are highly sensitive to contextual noise (e.g., background clutter). To address this issue, we introduce a visual comprehension stage, which we call \textbf{ViCToR}~(\textbf{Vi}sual \textbf{C}omprehension via \textbf{To}ken \textbf{R}econstruction), a novel pretraining framework for LMMs. ViCToR employs a learnable visual token pool and utilizes the Hungarian matching algorithm to select semantically relevant tokens from this pool for visual token replacement. Furthermore, by integrating a visual token reconstruction loss with dense semantic supervision, ViCToR can learn tokens which retain high visual detail, thereby enhancing the large language model’s (LLM’s) understanding of visual information. After pretraining on 3 million publicly accessible images and captions, \textbf{ViCToR} achieves state-of-the-art results, improving over LLaVA-NeXT-8B by $10.4\%$, $3.2\%$, and $7.2\%$ on the MMStar, SEED$^{I}$, and RealWorldQA benchmarks, respectively. We will release the code and model weights to facilitate reproducibility.
 
 ## 📜 News
 **[2024/10/21]** The [paper](https://arxiv.org/pdf/2410.14332) and [code](https://github.com/deepglint/Croc) are released!💥
 
 ## 👨‍💻 Todo
-- [ ] Better model base on Croc
-- [ ] Checkpoints of Croc-13B
-- [x] Checkpoints of Croc-7B
-- [x] Training code for Croc
+- [ ] Better model base on ViCToR
+- [ ] Checkpoints of ViCToR-13B
+- [x] Checkpoints of ViCToR-7B
+- [x] Training code for ViCToR
 
 ## 🤖 Model Zoo
 
 | Name | LLM | Checkpoint |  MMBench | MMBench-CN | SEED | MM-Vet | SQA-image | VQA-v2 | POPE | GQA | LLaVA-W |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Croc-7B | Vicuna-7B | [Croc-7B](https://huggingface.co/DeepGlint-AI/LLaVA-v1.5-Croc-7b) | 69.1 | 60.5 | 63.0 | 36.8 | 72.3 | 80.1 | 86.9 | 63.5 | 73.3 |
+| ViCToR-7B | Vicuna-7B | [ViCToR-7B](https://huggingface.co/DeepGlint-AI/LLaVA-v1.5-Croc-7b) | 69.1 | 60.5 | 63.0 | 36.8 | 72.3 | 80.1 | 86.9 | 63.5 | 73.3 |
 
 
 
 ## Install
 
 ```bash
-git clone https://github.com/deepglint/Croc.git
+git clone https://github.com/deepglint/Victor.git
 cd Croc
 conda create -n croc python=3.10 -y
 conda activate croc
@@ -52,7 +52,7 @@ pip install flash-attn --no-build-isolation
 bash scripts/pretrain_mlp.sh
 ```
 
-**Stage 1.5: Pretraining Croc**
+**Stage 1.5: Pretraining ViCToR**
 ```bash
 bash scripts/pretrain_croc.sh
 ```
@@ -69,8 +69,8 @@ bash scripts/finetune.sh
 
 ```latex
 @misc{xie2024crocpretraininglargemultimodal,
-      title={Croc: Pretraining Large Multimodal Models with Cross-Modal Comprehension}, 
-      author={Yin Xie and Kaicheng Yang and Ninghua Yang and Weimo Deng and Xiangzi Dai and Tiancheng Gu and Yumeng Wang and Xiang An and Yongle Zhao and Ziyong Feng and Jiankang Deng},
+      title={ViCToR: Improving Visual Comprehension via Token Reconstruction for Pretraining LMMs}, 
+      author={Yin Xie and Kaicheng Yang and Peirou Liang and Xiang An and Yongle Zhao and Yumeng Wang and Ziyong Feng and Roy Miles and Ismail Elezi and Jiankang Deng},
       year={2024},
       eprint={2410.14332},
       archivePrefix={arXiv},
