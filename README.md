@@ -40,10 +40,10 @@ After pretraining on 3 million publicly accessible images and captions, **ViCToR
   <img src="./assets/vis_1.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
 </p>
 <p align="center">
-  <img src="./assets/vis_1.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
+  <img src="./assets/vis_2.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
 </p>
 <p align="center">
-  <img src="./assets/vis_1.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
+  <img src="./assets/vis_3.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
 </p>
 
 
