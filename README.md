@@ -1,7 +1,3 @@
-#<p align="center" width="100%">
-#<img src="./assets/logo.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=30%>
-#</p>
-
 # ViCToR: Improving Visual Comprehension via Token Reconstruction for Pretraining LMMs
 
 
