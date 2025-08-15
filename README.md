@@ -2,7 +2,7 @@
 
 
 
-[![Arxiv](https://img.shields.io/badge/arXiv-2410.14332-red)](https://arxiv.org/abs/2410.14332) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-yellow)](https://huggingface.co/collections/DeepGlint-AI/croc-670d1a34f0ad3dc15144585b)
+[![Arxiv](https://img.shields.io/badge/arXiv-2410.14332-red)](https://arxiv.org/abs/2410.14332) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-ViCToR-yellow)](https://huggingface.co/collections/DeepGlint-AI/victor-670d1a34f0ad3dc15144585b)
 
 <p align="center">
   <img src="./assets/figure_acchitecture.png" alt="842f5fe2-84ad-464a-83d6-408bf1a0d9fa.webp" width=70%>
@@ -14,7 +14,7 @@ Large Multimodal Models (LMMs) often face a modality representation gap during p
 After pretraining on 3 million publicly accessible images and captions, **ViCToR** achieves state-of-the-art results, improving over LLaVA-NeXT-8B by 10.4%, 3.2%, and 7.2% on the MMStar, SEED_I, and RealWorldQA benchmarks, respectively. We will release the code and model weights to facilitate reproducibility.
 
 ## 📜 News
-**[2024/10/21]** The [paper](https://arxiv.org/pdf/2410.14332) and [code](https://github.com/deepglint/Croc) are released!💥
+**[2025/8/15]** The [paper](https://arxiv.org/pdf/2410.14332), [code](https://github.com/deepglint/Victor) and [weights](https://huggingface.co/collections/DeepGlint-AI/victor-670d1a34f0ad3dc15144585b) are released!💥
 
 ## 👨‍💻 Todo
 - [ ] Better model base on ViCToR
@@ -65,17 +65,17 @@ pip install flash-attn --no-build-isolation
 
 **Stage 1: Pretraining MLP**
 ```bash
-bash scripts/pretrain_mlp.sh
+bash scripts/train/stage1_pretrain_siglip.sh
 ```
 
 **Stage 1.5: Pretraining ViCToR**
 ```bash
-bash scripts/pretrain_victor.sh
+bash scripts/train/stage1.5_caption_siglip_qwen_victor.sh
 ```
 
 **Stage 2: Instructional Finetuning**
 ```bash
-bash scripts/finetune.sh
+bash scripts/train/stage2_finetune_siglip_qwen.sh
 ```
 
 ---
@@ -98,6 +98,6 @@ bash scripts/finetune.sh
 ## Acknowledgement  
 
 We extend our deepest gratitude to the creators and contributors of the following projects:  
-1. [LLaVA](https://github.com/haotian-liu/LLaVA): The comprehensive codebase for training Vision-Language Models (VLMs).  
+1. [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT): The comprehensive codebase for training Vision-Language Models (VLMs).  
 
 Their exceptional work has been instrumental to our research and development efforts.
